@@ -1,5 +1,28 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>qml/Cluster.qml</file>
+        <file>qml/Dial.qml</file>
+        <file>qml/Fuel.qml</file>
+        <file>qml/Label.qml</file>
+        <file>qml/LeftDial.qml</file>
+        <file>qml/RightDial.qml</file>
+        <file>qml/Top.qml</file>
+        <file>qml/images/+--.png</file>
+        <file>qml/images/dial_cursor.png</file>
+        <file>qml/images/dial_cursor_right.png</file>
+        <file>qml/images/dial_fill_color.png</file>
+        <file>qml/images/dial_fill_color_left.png</file>
+        <file>qml/images/dial_pattern.png</file>
+        <file>qml/images/fuel.png</file>
+        <file>qml/images/fuel_level.png</file>
+        <file>qml/images/fuelsymbol_orange.png</file>
+        <file>qml/images/left_dial.png</file>
+        <file>qml/images/mask_overlay.png</file>
+        <file>qml/images/middle-bkg.png</file>
+        <file>qml/images/middle-circle.png</file>
+        <file>qml/images/P-R-N-D.png</file>
+        <file>qml/images/right_dial.png</file>
+        <file>qml/images/top_bar.png</file>
     </qresource>
 </RCC>
