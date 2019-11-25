@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>main.qml</file>
         <file>qml/Cluster.qml</file>
         <file>qml/Dial.qml</file>
         <file>qml/Fuel.qml</file>
