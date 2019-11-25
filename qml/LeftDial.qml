@@ -57,11 +57,13 @@ import QtGraphicalEffects 1.0
 Item {
     id: root
 
-    width: 0.8 * 720
-    height: 720
+    width: 0.8 * appHeight
+    height: appHeight
 
     property real value: 0.0
     property bool metricSystem: false
+
+    property int appHeight: 720
 
     Image {
         id: overlay

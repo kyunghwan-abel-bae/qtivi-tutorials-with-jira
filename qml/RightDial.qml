@@ -56,14 +56,16 @@ import QtQuick 2.1
 Item {
     id: root
 
-    width: 0.8 * 720
-    height: 720
+    width: 0.8 * appHeight
+    height: appHeight
 
     property color warningColor: "transparent"
     property string warningIcon
     property string warningText
     property int value
     property alias fuelLevel: fuelMeter.value
+
+    property int appHeight: 720
 
     Item {
         width: root.width/3
@@ -206,6 +208,9 @@ Item {
 
     Fuel {
         id: fuelMeter
+
+        appHeight: root.appHeight
+
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 0.05 * root.height
         anchors.horizontalCenter: parent.horizontalCenter

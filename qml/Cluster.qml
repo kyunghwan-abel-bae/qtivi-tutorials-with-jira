@@ -1,4 +1,4 @@
-/****************************************************************************
+﻿/****************************************************************************
 **
 ** Copyright (C) 2019 Luxoft Sweden AB
 ** Copyright (C) 2018 Pelagicore AG
@@ -59,41 +59,62 @@ Window {
     id: root
 
     width: 1920
-    height: 720
+    height: appHeight
     title: qsTr("QtIVI Instrument Cluster")
     visible: true
     color: "#0c0c0c"
 
-    InstrumentCluster {
-        id: instrumentCluster
-    }
+    property int appHeight: 620
 
-    LeftDial {
-        id: leftDial
-        anchors.left: parent.left
-        anchors.leftMargin: 0.1 * width
+    Item {
+        id: container
 
-        value: instrumentCluster.speed
-    }
-
-    RightDial {
-        id: rightDial
-        anchors.right: parent.right
-        anchors.rightMargin: 0.1 * width
-
-        value: 3000
-    }
-
-    Top {
-        id: topbar
-        y: 7
-        anchors.horizontalCenter: parent.horizontalCenter
-
-        temperature: 15
-    }
-
-    Image {
         anchors.fill: parent
-        source: Qt.resolvedUrl("images/mask_overlay.png")
+
+        InstrumentCluster {
+            id: instrumentCluster
+        }
+
+        LeftDial {
+            id: leftDial
+
+            appHeight: root.appHeight
+
+            value: instrumentCluster.speed
+
+            anchors.left: parent.left
+            anchors.leftMargin: 0.1 * width
+
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        RightDial {
+            id: rightDial
+
+            appHeight: root.appHeight
+
+            value: 3000
+
+            anchors.right: parent.right
+            anchors.rightMargin: 0.1 * width
+
+            anchors.verticalCenter: parent.verticalCenter
+        }
+
+        Top {
+            id: topbar
+            y: 7
+
+            appHeight: root.appHeight
+
+            temperature: 15
+
+            anchors.horizontalCenter: parent.horizontalCenter
+        }
+
+        Image {
+            anchors.fill: parent
+            source: Qt.resolvedUrl("images/mask_overlay.png")
+        }
     }
 }

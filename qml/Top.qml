@@ -56,9 +56,11 @@ import QtQuick 2.1
 Item {
     id: root
     width: 0.37 * 1920
-    height: 0.12 * 720
+    height: 0.12 * appHeight
 
     property real temperature: 0
+
+    property int appHeight: 720
 
     Image {
         id: background
