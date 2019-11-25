@@ -53,6 +53,7 @@
 
 import QtQuick 2.1
 import QtQuick.Window 2.2
+import Example.IVI.InstrumentCluster 1.0
 
 Window {
     id: root
@@ -63,12 +64,16 @@ Window {
     visible: true
     color: "#0c0c0c"
 
+    InstrumentCluster {
+        id: instrumentCluster
+    }
+
     LeftDial {
         id: leftDial
         anchors.left: parent.left
         anchors.leftMargin: 0.1 * width
 
-        value: 80
+        value: instrumentCluster.speed
     }
 
     RightDial {

@@ -2,3 +2,5 @@ This project is create by
 	- kyunghwan.abel.bae@gmail.com
 	- tredici0@gmail.com
 	- igeneralstore@gmail.com
+
+qmake & make in frontend/frontend.pro is required for building this project.

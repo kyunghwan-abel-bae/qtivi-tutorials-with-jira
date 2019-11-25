@@ -10,7 +10,6 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-
     InstrumentClusterModule::registerQmlTypes();
 
     const QUrl url(QStringLiteral("qrc:/qml/Cluster.qml"));
