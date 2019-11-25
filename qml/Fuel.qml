@@ -56,10 +56,12 @@ import QtQuick 2.1
 Item {
     id: root
 
-    width: 0.73 * 720
+    width: 0.73 * appHeight
     height: width - 1
 
     property real value: 0
+
+    property int appHeight: 720
 
     Item {
         width: root.value * parent.width
