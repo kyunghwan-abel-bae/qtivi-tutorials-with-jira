@@ -3,4 +3,12 @@ This project is create by
 	- tredici0@gmail.com
 	- igeneralstore@gmail.com
 
+
 qmake & make in frontend/frontend.pro is required for building this project.
+
+---------------------------------------------------------
+If you get the error message about
+#include <QIviStandardItem>
+
+then changed to 
+#include <QtIviCore/QIviStandardItem>
