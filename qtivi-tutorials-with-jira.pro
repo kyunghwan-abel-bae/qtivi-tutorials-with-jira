@@ -28,3 +28,10 @@ QML_DESIGNER_IMPORT_PATH =
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+win32:CONFIG(release, debug|release): LIBS += -L$$PWD/./release/ -lQtIviInstrumentCluster
+else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/./debug/ -lQtIviInstrumentCluster
+else:unix: LIBS += -L$$PWD/./ -lQtIviInstrumentCluster
+
+INCLUDEPATH += $$PWD/.
+DEPENDPATH += $$PWD/.

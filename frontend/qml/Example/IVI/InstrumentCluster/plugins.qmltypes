@@ -1,0 +1,35 @@
+
+import QtQuick.tooling 1.2
+
+// This file describes the plugin-supplied types contained in the library.
+// It is used for QML tooling purposes only.
+//
+// This file was auto-generated with the QtIvi ivigenerator
+
+Module {
+    dependencies: ["QtIvi 1.0"]
+    Component {
+        name: "InstrumentCluster"
+        prototype: "QIviAbstractFeature"
+        exports: ["Example.IVI.InstrumentCluster/InstrumentCluster 1.0"]
+        exportMetaObjectRevisions: [0]
+        Property { name: "speed"; type: "int"; isReadonly: false  }
+        Signal {
+            name: "speedChanged"
+            Parameter { name: "speed"; type: "int" }
+        }
+        Method {
+            name: "setSpeed"
+            Parameter { name: "speed"; type: "int" }
+        }
+    }
+
+    Component {
+        name: "InstrumentClusterModule"
+        prototype: "QObject"
+        exports: ["Example.IVI.InstrumentCluster/InstrumentCluster 1.0"]
+        isCreatable: false
+        isSingleton: true
+        exportMetaObjectRevisions: [0]
+    }
+}
