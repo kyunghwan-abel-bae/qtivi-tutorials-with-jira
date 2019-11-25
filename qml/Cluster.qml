@@ -75,12 +75,13 @@ Window {
             id: instrumentCluster
         }
 
-        LeftDial {
+       LeftDial {
             id: leftDial
 
             appHeight: root.appHeight
 
             value: instrumentCluster.speed
+            metricSystem: instrumentCluster.systemType === InstrumentCluster.Metric
 
             anchors.left: parent.left
             anchors.leftMargin: 0.1 * width
@@ -93,7 +94,11 @@ Window {
 
             appHeight: root.appHeight
 
-            value: 3000
+            value: instrumentCluster.rpm
+            warningColor: instrumentCluster.currentWarning.color
+            warningText: instrumentCluster.currentWarning.text
+            warningIcon: instrumentCluster.currentWarning.icon
+            fuelLevel: instrumentCluster.fuel
 
             anchors.right: parent.right
             anchors.rightMargin: 0.1 * width

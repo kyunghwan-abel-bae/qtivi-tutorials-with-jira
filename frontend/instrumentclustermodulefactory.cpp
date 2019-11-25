@@ -27,10 +27,50 @@ QT_BEGIN_NAMESPACE
 
     The following enums are exported from this object:
 
+    \section3 SystemType
+    \include example.ivi.instrumentclustermodule_enum.qdocinc SystemType
 */
 InstrumentClusterModuleFactory::InstrumentClusterModuleFactory(QObject *parent)
     : InstrumentClusterModule(parent)
 {
+}
+
+/*!
+    \qmlmethod Warning Example.IVI.InstrumentCluster::InstrumentCluster()
+
+    Returns a default instance of Warning
+
+    \sa Warning
+*/
+/*!
+    Returns a default instance of Warning.
+
+    \sa Warning
+*/
+Warning InstrumentClusterModuleFactory::warning() const
+{
+    return Warning();
+}
+
+/*!
+    \qmlmethod Warning Example.IVI.InstrumentCluster::InstrumentCluster(const QString &color, const QString &text, const QString &icon)
+
+    Returns a default instance of Warning
+
+    \sa Warning
+*/
+/*!
+    Returns a instance of Warning using the passed arguments.
+
+
+
+
+
+    \sa Warning
+*/
+Warning InstrumentClusterModuleFactory::warning(const QString &color, const QString &text, const QString &icon) const
+{
+    return Warning(color, text, icon);
 }
 
 

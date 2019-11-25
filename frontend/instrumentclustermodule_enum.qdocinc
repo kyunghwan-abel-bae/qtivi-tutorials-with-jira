@@ -1,1 +1,5 @@
 
+//! [SystemType]
+\value Imperial
+\value Metric
+//! [SystemType]
