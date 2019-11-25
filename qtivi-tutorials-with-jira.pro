@@ -33,5 +33,5 @@ win32:CONFIG(release, debug|release): LIBS += -L$$PWD/./release/ -lQtIviInstrume
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/./debug/ -lQtIviInstrumentCluster
 else:unix: LIBS += -L$$PWD/./ -lQtIviInstrumentCluster
 
-INCLUDEPATH += $$PWD/.
-DEPENDPATH += $$PWD/.
+INCLUDEPATH += $$PWD/frontend/.
+DEPENDPATH += $$PWD/frontend/.

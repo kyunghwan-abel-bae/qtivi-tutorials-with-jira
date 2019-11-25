@@ -12,6 +12,7 @@
 
 #include "instrumentclustermodule.h"
 
+#include "warning.h"
 
 #include <QtIviCore/QIviFeatureInterface>
 #include <QtIviCore/QIviPendingReply>
@@ -27,10 +28,14 @@ public:
     explicit InstrumentClusterBackendInterface(QObject *parent = nullptr);
     ~InstrumentClusterBackendInterface();
 
-    virtual void setSpeed(int speed) = 0;
 
 Q_SIGNALS:
     void speedChanged(int speed=int(0));
+    void rpmChanged(int rpm=int(0));
+    void fuelChanged(qreal fuel=qreal());
+    void temperatureChanged(qreal temperature=qreal());
+    void systemTypeChanged(InstrumentClusterModule::SystemType systemType=InstrumentClusterModule::Imperial);
+    void currentWarningChanged(const Warning &currentWarning=Warning());
 };
 
 #define InstrumentCluster_InstrumentCluster_iid ("Example.IVI.InstrumentCluster.InstrumentCluster")

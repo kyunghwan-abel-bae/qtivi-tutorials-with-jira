@@ -13,6 +13,7 @@
 #include "instrumentclustermodule.h"
 #include <QObject>
 
+#include "warning.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -23,6 +24,8 @@ class Q_EXAMPLE_IVI_INSTRUMENTCLUSTER_EXPORT InstrumentClusterModuleFactory : pu
 public:
     InstrumentClusterModuleFactory(QObject *parent = nullptr);
 
+    Q_INVOKABLE Warning warning() const;
+    Q_INVOKABLE Warning warning(const QString &color, const QString &text, const QString &icon) const;
 };
 
 QT_END_NAMESPACE

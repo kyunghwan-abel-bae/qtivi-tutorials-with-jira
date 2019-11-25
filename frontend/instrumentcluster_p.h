@@ -42,11 +42,21 @@ public:
     void clearToDefaults();
 
     void onSpeedChanged(int speed);
+    void onRpmChanged(int rpm);
+    void onFuelChanged(qreal fuel);
+    void onTemperatureChanged(qreal temperature);
+    void onSystemTypeChanged(InstrumentClusterModule::SystemType systemType);
+    void onCurrentWarningChanged(const Warning &currentWarning);
 
     bool notify(const QByteArray &propertyName, const QVariant &value) override;
 
     InstrumentCluster * const q_ptr;
     int m_speed;
+    int m_rpm;
+    qreal m_fuel;
+    qreal m_temperature;
+    InstrumentClusterModule::SystemType m_systemType;
+    Warning m_currentWarning;
 
     Q_DECLARE_PUBLIC(InstrumentCluster)
 };

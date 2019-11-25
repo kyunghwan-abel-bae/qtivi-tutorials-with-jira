@@ -74,6 +74,7 @@ Window {
         anchors.leftMargin: 0.1 * width
 
         value: instrumentCluster.speed
+        metricSystem: instrumentCluster.systemType === InstrumentCluster.Metric
     }
 
     RightDial {
@@ -81,7 +82,11 @@ Window {
         anchors.right: parent.right
         anchors.rightMargin: 0.1 * width
 
-        value: 3000
+        value: instrumentCluster.rpm
+        warningColor: instrumentCluster.currentWarning.color
+        warningText: instrumentCluster.currentWarning.text
+        warningIcon: instrumentCluster.currentWarning.icon
+        fuelLevel: instrumentCluster.fuel
     }
 
     Top {

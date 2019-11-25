@@ -7,6 +7,7 @@ HEADERS += \
     $$PWD/instrumentcluster.h \
     $$PWD/instrumentcluster_p.h \
     $$PWD/instrumentclusterbackendinterface.h \
+    $$PWD/warning.h \
     $$PWD/instrumentclustermodule.h \
     $$PWD/instrumentclustermodulefactory.h \
     $$PWD/instrumentclusterglobal.h
@@ -14,5 +15,6 @@ HEADERS += \
 SOURCES += \
     $$PWD/instrumentcluster.cpp \
     $$PWD/instrumentclusterbackendinterface.cpp \
+    $$PWD/warning.cpp \
     $$PWD/instrumentclustermodule.cpp \
     $$PWD/instrumentclustermodulefactory.cpp

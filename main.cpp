@@ -1,7 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
-#include "frontend/instrumentcluster.h"
+#include "instrumentcluster.h"
 
 int main(int argc, char *argv[])
 {

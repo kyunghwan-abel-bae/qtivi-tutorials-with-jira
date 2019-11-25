@@ -36,19 +36,6 @@ InstrumentClusterBackendInterface::~InstrumentClusterBackendInterface()
 {
 }
 
-/*!
-    \fn void InstrumentClusterBackendInterface::setSpeed(int speed);
-
-    Setter for InstrumentCluster::speed.
-    Sets the property \e speed to the new value passed by \a speed.
-
-
-    This method is expected to emit a \l speedChanged() signal when the internal state changes
-    due to this function call. The signal is even expected to be emitted if the given \a speed is out of range and no
-    actual change takes place.
-
-    \sa speedChanged()
-*/
 
 /*!
     \fn void InstrumentClusterBackendInterface::speedChanged(int speed);
@@ -56,8 +43,47 @@ InstrumentClusterBackendInterface::~InstrumentClusterBackendInterface()
     The signal is emitted when the \e speed property changed to \a speed.
 
 
-    \sa setSpeed
     \sa InstrumentCluster::speed
+*/
+/*!
+    \fn void InstrumentClusterBackendInterface::rpmChanged(int rpm);
+
+    The signal is emitted when the \e rpm property changed to \a rpm.
+
+
+    \sa InstrumentCluster::rpm
+*/
+/*!
+    \fn void InstrumentClusterBackendInterface::fuelChanged(qreal fuel);
+
+    The signal is emitted when the \e fuel property changed to \a fuel.
+
+
+    \sa InstrumentCluster::fuel
+*/
+/*!
+    \fn void InstrumentClusterBackendInterface::temperatureChanged(qreal temperature);
+
+    The signal is emitted when the \e temperature property changed to \a temperature.
+
+
+    \sa InstrumentCluster::temperature
+*/
+/*!
+    \fn void InstrumentClusterBackendInterface::systemTypeChanged(InstrumentClusterModule::SystemType systemType);
+
+    The signal is emitted when the \e systemType property changed to \a systemType.
+
+
+    \sa InstrumentCluster::systemType
+*/
+/*!
+    \fn void InstrumentClusterBackendInterface::currentWarningChanged(const Warning &currentWarning);
+
+    The signal is emitted when the \e currentWarning property changed to \a currentWarning.
+
+
+    \sa InstrumentCluster::currentWarning
 */
 
 QT_END_NAMESPACE

@@ -13,14 +13,35 @@ Module {
         prototype: "QIviAbstractFeature"
         exports: ["Example.IVI.InstrumentCluster/InstrumentCluster 1.0"]
         exportMetaObjectRevisions: [0]
-        Property { name: "speed"; type: "int"; isReadonly: false  }
+        Property { name: "speed"; type: "int"; isReadonly: true  }
+        Property { name: "rpm"; type: "int"; isReadonly: true  }
+        Property { name: "fuel"; type: "double"; isReadonly: true  }
+        Property { name: "temperature"; type: "double"; isReadonly: true  }
+        Property { name: "systemType"; type: "InstrumentClusterModule::SystemType"; isReadonly: true  }
+        Property { name: "currentWarning"; type: "QVariant"; isReadonly: true  }
         Signal {
             name: "speedChanged"
             Parameter { name: "speed"; type: "int" }
         }
-        Method {
-            name: "setSpeed"
-            Parameter { name: "speed"; type: "int" }
+        Signal {
+            name: "rpmChanged"
+            Parameter { name: "rpm"; type: "int" }
+        }
+        Signal {
+            name: "fuelChanged"
+            Parameter { name: "fuel"; type: "double" }
+        }
+        Signal {
+            name: "temperatureChanged"
+            Parameter { name: "temperature"; type: "double" }
+        }
+        Signal {
+            name: "systemTypeChanged"
+            Parameter { name: "systemType"; type: "InstrumentClusterModule::SystemType" }
+        }
+        Signal {
+            name: "currentWarningChanged"
+            Parameter { name: "currentWarning"; type: "QVariant" }
         }
     }
 
@@ -31,5 +52,23 @@ Module {
         isCreatable: false
         isSingleton: true
         exportMetaObjectRevisions: [0]
+        Enum {
+            name: "SystemType"
+            values: {
+                "Imperial": 0,
+                "Metric": 1
+            }
+        }
+        Method {
+            name: "warning"
+            type: "Warning"
+            Parameter { name: "color"; type: "string" }
+            Parameter { name: "text"; type: "string" }
+            Parameter { name: "icon"; type: "string" }
+        }
+        Method {
+            name: "warning"
+            type: "Warning"
+        }
     }
 }
