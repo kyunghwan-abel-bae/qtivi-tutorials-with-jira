@@ -14,6 +14,9 @@
 #include <QObject>
 #include <QDataStream>
 #include <QDebug>
+
+// edit by KH
+//#include <QIviStandardItem>
 #include <QtIviCore/QIviStandardItem>
 
 QT_BEGIN_NAMESPACE
