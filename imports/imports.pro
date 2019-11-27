@@ -21,4 +21,5 @@ exists($$OUT_PWD/qmldir) {
     COPIES += cpqmldir
 }
 
+target.path = $$OUT_PWD/.
 INSTALLS += target

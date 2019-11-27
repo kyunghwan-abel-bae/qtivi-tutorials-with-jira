@@ -1,0 +1,4 @@
+module Example.IVI.InstrumentCluster
+plugin instrumentclusterplugin
+classname InstrumentClusterQmlPlugin
+typeinfo plugins.qmltypes

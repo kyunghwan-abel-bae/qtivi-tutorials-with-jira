@@ -1,8 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
-#include "instrumentcluster.h"
-
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -10,7 +8,7 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-    InstrumentClusterModule::registerQmlTypes();
+    engine.addImportPath(app.applicationDirPath() + "/imports");
 
     const QUrl url(QStringLiteral("qrc:/qml/Cluster.qml"));
 
