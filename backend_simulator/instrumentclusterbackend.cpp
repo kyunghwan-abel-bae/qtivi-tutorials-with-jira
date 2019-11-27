@@ -25,7 +25,7 @@ InstrumentClusterBackend::InstrumentClusterBackend(QIviSimulationEngine *engine,
     , m_speed(int(0))
     , m_rpm(int(0))
     , m_fuel(qreal(0.0))
-    , m_temperature(qreal(0.0))
+    , m_temperature(15)
     , m_systemType(InstrumentClusterModule::Imperial)
     , m_currentWarning(Warning())
 {

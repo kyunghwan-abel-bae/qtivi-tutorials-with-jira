@@ -33,7 +33,7 @@ InstrumentClusterPlugin::InstrumentClusterPlugin(QObject *parent)
     m_simulationEngine->registerSimulationInstance(InstrumentClusterInstance, "Example.IVI.InstrumentCluster.simulation", 1, 0, "InstrumentClusterBackend");
     m_interfaces << InstrumentClusterInstance;
     m_simulationEngine->loadSimulationData(QStringLiteral(":/simulation/instrumentcluster_simulation_data.json"));
-    m_simulationEngine->loadSimulation(QUrl(QStringLiteral("qrc:///simulation/instrumentcluster_simulation.qml")));
+    m_simulationEngine->loadSimulation(QUrl(QStringLiteral("qrc:/simulation.qml")));
 }
 
 /*! \internal */
