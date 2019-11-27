@@ -4,7 +4,11 @@ This project is created by
 	- igeneralstore@gmail.com
 
 
-qmake & make in frontend/frontend.pro is required for building this project.
+qmake & make in 
+frontend/frontend.pro 
+backend_simulator/backend_simulator.pro 
+imports/imports.pro 
+is required for building this project.
 
 ---------------------------------------------------------
 If you get the error message about
