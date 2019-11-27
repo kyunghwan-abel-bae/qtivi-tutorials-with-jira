@@ -5,10 +5,11 @@ This project is created by
 
 
 qmake & make in 
-frontend/frontend.pro 
-backend_simulator/backend_simulator.pro 
-imports/imports.pro 
-is required for building this project.
+	frontend/frontend.pro 
+	backend_simulator/backend_simulator.pro 
+	imports/imports.pro 
+
+are required for building this project.
 
 ---------------------------------------------------------
 If you get the error message about
