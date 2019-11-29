@@ -1,0 +1,8 @@
+
+{
+  "InstrumentCluster": {
+    "temperature": {
+      "default": 15
+    }
+  }
+}

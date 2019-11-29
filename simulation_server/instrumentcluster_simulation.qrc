@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/simulation">
+        <file>instrumentcluster_simulation_data.json</file>
+        <file>instrumentcluster_simulation.qml</file>
+        <file>InstrumentClusterSimulation.qml</file>
+    </qresource>
+</RCC>

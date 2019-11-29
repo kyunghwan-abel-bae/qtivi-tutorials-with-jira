@@ -11,10 +11,15 @@ qmake & make in
 	frontend/frontend.pro 
 	backend_simulator/backend_simulator.pro 
 	imports/imports.pro 
+	backend_qtra/backend_qtra.pro
+	simulation_server/simulation_server.pro
 
 are required for building this project.
 
+The proper result(synced output) can be confirmed by running an 'ipc-server' and starting this project more than two times.
+
 ---------------------------------------------------------
+
 If you get the error message about
 #include <QIviStandardItem>
 

@@ -1,0 +1,146 @@
+import QtQuick.tooling 1.2
+
+// This file describes the plugin-supplied types contained in the library.
+// It is used for QML tooling purposes only.
+//
+// This file was auto-generated with the QtIvi ivigenerator
+
+Module {
+    dependencies: ["QtIvi 1.0"]
+    Component {
+        name: "IviSimulator"
+        prototype: "QIviSimulationGlobalObject"
+        exports: ["Example.IVI.InstrumentCluster.simulation/IviSimulator 1.0"]
+        isCreatable: false
+        isSingleton: true
+
+        Property { name: "simulationData"; type: "QVariantMap" }
+        Method {
+            name: "findData"
+            type: "QVariantMap"
+            Parameter { name: "data"; type: "QVariantMap" }
+            Parameter { name: "interface"; type: "string" }
+        }
+        Method {
+            name: "initializeDefault"
+            Parameter { name: "data"; type: "QVariantMap" }
+            Parameter { name: "object"; type: "QObject"; isPointer: true }
+        }
+        Method {
+            name: "defaultValue"
+            type: "QVariant"
+            Parameter { name: "data"; type: "QVariantMap" }
+            Parameter { name: "zone"; type: "string" }
+        }
+        Method {
+            name: "constraint"
+            type: "string"
+            Parameter { name: "data"; type: "QVariantMap" }
+            Parameter { name: "value"; type: "QVariant" }
+        }
+        Method {
+            name: "checkSettings"
+            type: "bool"
+            Parameter { name: "data"; type: "QVariantMap" }
+            Parameter { name: "value"; type: "QVariant" }
+            Parameter { name: "zone"; type: "string" }
+        }
+        Method {
+            name: "parseDomainValue"
+            type: "QVariant"
+            Parameter { name: "data"; type: "QVariantMap" }
+            Parameter { name: "domain"; type: "string" }
+            Parameter { name: "zone"; type: "string" }
+        }
+    }
+
+    Component {
+        name: "InstrumentClusterBackend"
+        prototype: "InstrumentClusterBackendInterface"
+        exports: ["Example.IVI.InstrumentCluster.simulation/InstrumentClusterBackend 1.0"]
+        exportMetaObjectRevisions: [0]
+        Property { name: "Base"; type: "InstrumentClusterBackend"; isPointer: true }
+        Property { name: "speed"  ; type: "int"  }
+        Property { name: "rpm"  ; type: "int"  }
+        Property { name: "fuel"  ; type: "double"  }
+        Property { name: "temperature"  ; type: "double"  }
+        Property { name: "systemType"  ; type: "InstrumentClusterModule::SystemType"  }
+        Property { name: "currentWarning"  ; type: "QVariant"  }
+        Signal {
+            name: "speedChanged"
+            Parameter { name: "speed"; type: "int" }
+        }
+        Signal {
+            name: "rpmChanged"
+            Parameter { name: "rpm"; type: "int" }
+        }
+        Signal {
+            name: "fuelChanged"
+            Parameter { name: "fuel"; type: "double" }
+        }
+        Signal {
+            name: "temperatureChanged"
+            Parameter { name: "temperature"; type: "double" }
+        }
+        Signal {
+            name: "systemTypeChanged"
+            Parameter { name: "systemType"; type: "InstrumentClusterModule::SystemType" }
+        }
+        Signal {
+            name: "currentWarningChanged"
+            Parameter { name: "currentWarning"; type: "QVariant" }
+        }
+        Method { name: "initialize" }
+        Method {
+            name: "setSpeed"
+            Parameter { name: "speed"; type: "int" }
+        }
+        Method {
+            name: "setRpm"
+            Parameter { name: "rpm"; type: "int" }
+        }
+        Method {
+            name: "setFuel"
+            Parameter { name: "fuel"; type: "double" }
+        }
+        Method {
+            name: "setTemperature"
+            Parameter { name: "temperature"; type: "double" }
+        }
+        Method {
+            name: "setSystemType"
+            Parameter { name: "systemType"; type: "InstrumentClusterModule::SystemType" }
+        }
+        Method {
+            name: "setCurrentWarning"
+            Parameter { name: "currentWarning"; type: "QVariant" }
+        }
+    }
+
+    Component {
+        name: "InstrumentClusterModule"
+        prototype: "QObject"
+        exports: ["Example.IVI.InstrumentCluster.simulation/InstrumentCluster 1.0"]
+        isCreatable: false
+        isSingleton: true
+        exportMetaObjectRevisions: [0]
+        Enum {
+            name: "SystemType"
+            values: {
+                "Imperial": 0,
+                "Metric": 1
+            }
+        }
+        Method {
+            name: "warning"
+            type: "Warning"
+            Parameter { name: "color"; type: "string" }
+            Parameter { name: "text"; type: "string" }
+            Parameter { name: "icon"; type: "string" }
+        }
+        Method {
+            name: "warning"
+            type: "Warning"
+        }
+    }
+}
