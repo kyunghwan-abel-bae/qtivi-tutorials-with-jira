@@ -35,3 +35,7 @@ else:unix: LIBS += -L$$PWD/./ -lQtIviInstrumentCluster
 
 INCLUDEPATH += $$PWD/frontend/.
 DEPENDPATH += $$PWD/frontend/.
+
+SUBDIRS += \
+    dbus_server/dbus_server.pro \
+    dbus_server/dbus_server.pro
