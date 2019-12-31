@@ -24,11 +24,11 @@ qmake & make in
 >>frontend/frontend.pro<br>
 >>backend_simulator/backend_simulator.pro<br> 
 >>imports/imports.pro<br> 
->>backend_qtra/backend_qtra.pro<br>
->>simulation_server/simulation_server.pro<br>
+>>backend_dbus/backend_dbus.pro<br>
+>>dbus_server/dbus_server.pro<br>
 are required for building this project.
 
-The proper result(synced output) can be confirmed by running an 'ipc-server' and starting this project more than two times.
+The proper result(synced output) can be confirmed by running an 'dbus-server' and starting this project more than two times.
 
 ---
 
